@@ -13,3 +13,5 @@ export default function () { //todas las pruebas de k6 deben estar dentro de una
 //para ver el resultado de la prueba, usar el comando: k6 run --summary-export=summary.json hola_mundo.js
 //para ver el resultado en tiempo real, usar el comando: k6 run --http-debug=full hola_mundo.js
 //para ver el resultado en tiempo real y exportar el resumen, usar el comando: k6 run --http-debug=full --summary-export=summary.json hola_mundo.js
+
+//k6 run --vus 20 --duration 120s hola_mundo.js para ejecutar el script con 20 usuarios virtuales durante 120 segundos 
