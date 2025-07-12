@@ -11,5 +11,7 @@ export const options = { //opciones de la prueba, para mejorar la ejecucion y el
 export default function () { //todas las pruebas de k6 deben estar dentro de una funcion por defecto 
     const rta = http.get('https://test.k6.io'); //asignar la respuesta de la peticion get a la variable rta 
     check(rta, { 'la pagina se carga': (r) => r.status === 200 }); // verificar la respuesta de la peticion, rta es la respuesta de la peticion 
+    //validando texto en pagina 
+    check(rta, { 'validando texto': (r) => r.body.includes('Welcome to the K6 demo site!') }); // verificar que el cuerpo de la respuesta contenga el texto especificado 
     sleep(1);
 }
