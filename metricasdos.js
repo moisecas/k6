@@ -57,3 +57,4 @@ export default function () { // todas las pruebas de k6 deben estar dentro de un
 
     sleep(1); // hacer una pausa de 1 segundo entre peticiones
 }
+// para ejecutar este script, usar el comando: k6 run metricas.js 
